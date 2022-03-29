@@ -12,10 +12,12 @@ const NewsController = require("./src/Controllers/news.controller");
 const LatestPhotoController = require("./src/Controllers/latest_photos.controller");
 const FeedController = require("./src/Controllers/feed.controller");
 const MiniFeedController = require("./src/Controllers/minifeed.controller");
+const ScheduleController = require("./src/Controllers/schedule.controller");
 
 app.use("/news", NewsController);
 app.use("/latestphoto", LatestPhotoController);
 app.use("/feed", FeedController);
 app.use("/minifeed", MiniFeedController);
+app.use("/schedule", ScheduleController);
 
 module.exports = app;
