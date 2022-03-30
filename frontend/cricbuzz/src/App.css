@@ -2,4 +2,26 @@ body{
   width: 100%;
   margin: auto;
   margin-top: 60px;
+  gap: 2px;
+}
+.container{  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 92%;
+  grid-gap: 10px;
+  margin: auto;
+}
+#scores{
+  width: 90%;
+  margin: auto;  
+  height: 140px;  
+  overflow-x: scroll;
+}
+#H3{
+    color:#009270 ;
+}
+#dh3{
+  width: 90%;
+  margin: auto; 
+  text-align: left;
 }

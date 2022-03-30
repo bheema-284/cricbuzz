@@ -1,0 +1,41 @@
+
+body{
+    background-color: rgb(121, 121, 121);
+}.data1{
+    width: 140%;    
+    margin: auto;
+    margin-left: -180px;
+}
+.img{
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+}
+.data2{    
+    width: 50%;
+    margin-right: 10px;
+}
+.p2{
+    color: rgb(97, 96, 96);
+}
+.data3{
+    
+    width: 100%;
+    margin-right: 10px;
+}
+.img3{
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+}
+
+#H3{
+    color:#009270 ;
+}
+#aa{
+    text-decoration: none;
+    color: black;
+}
+.lnk{
+    color: black;
+}

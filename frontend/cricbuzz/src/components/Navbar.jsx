@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { LoginPage } from './LoginPage';
 import { AppBar, Toolbar, Button, Menu, MenuItem } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { makeStyles } from '@mui/styles';
@@ -39,7 +40,13 @@ const useStyles = makeStyles((theme) => ({
     },
   },
 }));
-
+const LoginPages = () => {
+  return (
+    <div>
+      <LoginPage />
+    </div>
+  );
+};
 export const Navbar = () => {
   const location = useLocation();
   const [active, setActive] = useState(location.pathname.substring(1));
@@ -319,7 +326,9 @@ export const Navbar = () => {
               aria-controls={open ? 'basic-menu' : undefined}
               aria-haspopup="true"
               aria-expanded={open ? 'true' : undefined}
-              // onClick={handleClick}
+              onClick={() => {
+                LoginPages;
+              }}
             />
           </div>
           <div className={classes.menuIcon}>
@@ -328,7 +337,7 @@ export const Navbar = () => {
               aria-controls={open ? 'basic-menu' : undefined}
               aria-haspopup="true"
               aria-expanded={open ? 'true' : undefined}
-              // onClick={handleClick}
+              // onClick={<LoginPage />}
             />
           </div>
         </Toolbar>

@@ -1,6 +1,7 @@
 import './App.css';
-import { HomePage } from './components/HomePage';
+import { HomePage, LatestScores, News, Videos } from './components/HomePage';
 import { Navbar } from './components/Navbar';
+import { NewsDetailPage } from './components/NewsDetails';
 import { Routes, Route } from 'react-router-dom';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { grey, red } from '@mui/material/colors';
@@ -9,7 +10,7 @@ import { useState } from 'react';
 import { Footer } from './components/Footer';
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   // Theme customization
   const theme = createTheme({
@@ -39,8 +40,22 @@ function App() {
           backgroundColor: darkMode ? '#121212' : '#edf1fd',
         }}>
         <Navbar handleTheme={handleTheme} />
+        <div id="dh3">
+          <h3 id="H3">FEATURED MATCHES</h3>
+        </div>
+        <div id="scores">
+          <div className="scores">
+            <LatestScores />
+          </div>
+        </div>
+        <hr />
+        <div className="container">
+          <News />
+          <HomePage />
+          <Videos />
+        </div>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/news/:id" element={<NewsDetailPage />} />
         </Routes>
       </Paper>
       <Footer />
