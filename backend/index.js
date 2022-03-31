@@ -16,6 +16,7 @@ const MiniFeedController = require("./src/Controllers/minifeed.controller");
 const ScheduleController = require("./src/Controllers/schedule.controller");
 const VideosController = require("./src/Controllers/videos.controller");
 const PhotosController = require("./src/Controllers/photos.controller");
+const RankingController = require("./src/Controllers/ranking.controller");
 
 app.use("/news", NewsController);
 app.use("/latestphoto", LatestPhotoController);
@@ -24,5 +25,6 @@ app.use("/minifeed", MiniFeedController);
 app.use("/schedule", ScheduleController);
 app.use("/videos", VideosController);
 app.use("/photos", PhotosController);
+app.use("/ranking", RankingController);
 
 module.exports = app;
