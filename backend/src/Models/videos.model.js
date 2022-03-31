@@ -8,7 +8,7 @@ const videosSchema = new mongoose.Schema(
     title: { type: String, required: true },
     content: { type: String, required: true },
     time: { type: String, required: true },
-    video_link: { type: String, required: true },
+    video_link: { type: String, required: false },
   },
   { timestamps: true, versionKey: false },
 );
