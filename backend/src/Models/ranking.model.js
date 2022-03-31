@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const rankingSchema = new mongoose.Schema(
   {
     position: { type: Number, required: true },
-    player: [{ type: String }],
+    player: [{ img: String, name: String, country: String }],
     rating: { type: Number, required: true },
   },
   { timestamps: true, versionKey: false },
