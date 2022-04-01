@@ -2,13 +2,9 @@ import './Styles.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
-//import { Link } from '@mui/material';
-
 export const HomePage = () => {
   const [mockData, setMockdata] = useState([]);
-  //const url = 'https://api.cricapi.com/v1/currentMatches?apikey=8fb2094c-bd8b-4406-b438-2cc52cff19ea&offset=0&4bb075f6-10d9-4d0b-937a-65fed76bd2a8';
-
-  const url = 'http://localhost:8080/minifeed';
+  const url = 'https://cricbuzz-backend.herokuapp.com/minifeed';
 
   useEffect(() => {
     axios.get(url).then((res) => {
@@ -19,10 +15,7 @@ export const HomePage = () => {
   return (
     <>
       <div className="data">
-        {/* Iterate over products and show links */}
-
         {mockData.map((el) => {
-          //return <Link to={`/`}>{<>el.image</><>el.title</>}</Link>;
           return (
             <div className="data1">
               <p>{el.title}</p>
@@ -40,9 +33,7 @@ export const HomePage = () => {
 };
 export const News = () => {
   const [mockData1, setMockdata1] = useState([]);
-  //const url = 'https://api.cricapi.com/v1/currentMatches?apikey=8fb2094c-bd8b-4406-b438-2cc52cff19ea&offset=0&4bb075f6-10d9-4d0b-937a-65fed76bd2a8';
-
-  const url1 = 'http://localhost:8080/news';
+  const url1 = 'https://cricbuzz-backend.herokuapp.com/news';
 
   useEffect(() => {
     axios.get(url1).then((res) => {
@@ -65,7 +56,6 @@ export const News = () => {
                   {el.title}
                 </Link>
               </p>
-              {/* <img className="img2" src={el.image} alt="" /> */}
               <div>
                 <p className="p2">{el.time}</p>
               </div>
@@ -79,7 +69,7 @@ export const News = () => {
 
 export const Videos = () => {
   const [mockData2, setMockdata2] = useState([]);
-  const url2 = 'http://localhost:8080/videos';
+  const url2 = 'https://cricbuzz-backend.herokuapp.com/videos';
 
   useEffect(() => {
     axios.get(url2).then((res) => {

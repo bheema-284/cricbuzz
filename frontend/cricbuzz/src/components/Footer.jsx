@@ -1,3 +1,4 @@
+import './styles.css';
 import React from 'react';
 import { makeStyles } from '@mui/styles';
 import { Grid } from '@mui/material';
@@ -8,6 +9,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import AdbIcon from '@mui/icons-material/Adb';
+import { Link } from 'react-router-dom';
 import AppleIcon from '@mui/icons-material/Apple';
 import LanguageIcon from '@mui/icons-material/Language';
 const useStyles = makeStyles((theme) => ({
@@ -49,16 +51,24 @@ export const Footer = () => {
       <div style={{ display: 'flex', justifyContent: 'space-evenly' }}>
         <div>
           <p>
-            <img
-              src={logo}
-              onClick={() => {
-                setActive('home');
-                navigate('/');
-              }}
-              className={classes.logo}
-              alt="team image"
-              fetchpriority="high"
-            />{' '}
+            <Link
+              to="/"
+              style={{
+                color: 'white',
+                textDecoration: 'none',
+                marginTop: '3px',
+              }}>
+              <img
+                src={logo}
+                onClick={() => {
+                  setActive('home');
+                  navigate('/');
+                }}
+                className={classes.logo}
+                alt="team image"
+                fetchpriority="high"
+              />{' '}
+            </Link>
           </p>
         </div>
         <div>
@@ -68,9 +78,7 @@ export const Footer = () => {
             fontSize="small"
           />
           <span>
-            <a
-              style={{ color: 'white', textDecoration: 'none' }}
-              href="https://www.cricbuzz.com/">
+            <a style={{ color: 'white', textDecoration: 'none' }} href="/">
               m.cricbuzz.com
             </a>
           </span>
@@ -153,21 +161,62 @@ export const Footer = () => {
         </div>
         <div>
           <p>COMPANY</p>
-          <a>Careers</a>
+          <Link
+            to="/careers"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              marginTop: '3px',
+            }}>
+            <a id="fa">Careers</a>
+          </Link>
           <br />
-          <a>Advertise</a>
+          <Link
+            to="/advertise"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              marginTop: '3px',
+            }}>
+            <a id="fa">Advertise</a>
+          </Link>
           <br />
-          <a>Privicy Policy</a>
+
+          <Link
+            to="/privacy"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              marginTop: '3px',
+            }}>
+            <a id="fa">Privicy Policy</a>
+          </Link>
           <br />
-          <a>Terms of Use</a>
+          <Link
+            to="/termsofuse"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              marginTop: '3px',
+            }}>
+            <a id="fa">Terms of Use</a>
+          </Link>
           <br />
-          <a>Cricbuzz TV Ads</a>
-          <br />
+          <Link
+            to="/tvads"
+            style={{
+              color: 'white',
+              textDecoration: 'none',
+              marginTop: '3px',
+            }}>
+            <a id="fa">Cricbuzz TV Ads</a>
+            <br />
+          </Link>
         </div>
       </div>
 
       <div style={{ justifyContent: 'center', textAlign: 'center' }}>
-        <p style={{ display: 'inline' }}>
+        <p style={{ display: 'inline', fontSize: 'small' }}>
           <CopyrightIcon
             style={{ paddingTop: '2px', marginTop: '5px' }}
             fontSize="small"

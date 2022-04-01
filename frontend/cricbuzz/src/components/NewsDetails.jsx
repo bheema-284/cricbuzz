@@ -9,7 +9,7 @@ export const NewsDetailPage = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/news/${id}`)
+      .get(`https://cricbuzz-backend.herokuapp.com/${id}`)
       .then((res) => {
         setProduct(res.data);
       })

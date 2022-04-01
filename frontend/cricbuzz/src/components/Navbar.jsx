@@ -93,25 +93,25 @@ export const Navbar = () => {
       MenuListProps={{
         'aria-labelledby': 'basic-button',
       }}>
-      <MenuItem component={Link} onClick={handleClose} to="/">
+      <MenuItem component={Link} onClick={handleClose} to="/news">
         All stories
       </MenuItem>
-      <MenuItem component={Link} onClick={handleClose} to="/schedule">
+      <MenuItem component={Link} onClick={handleClose} to="/crickbuzzplus">
         Criccbuzz Plus
       </MenuItem>
-      <MenuItem component={Link} onClick={handleClose} to="/archivies">
+      <MenuItem component={Link} onClick={handleClose} to="/news">
         Latest News
       </MenuItem>
       <MenuItem component={Link} onClick={handleClose} to="/news">
         Topics
       </MenuItem>
-      <MenuItem component={Link} onClick={handleClose} to="/series">
+      <MenuItem component={Link} onClick={handleClose} to="/news">
         Spotlight
       </MenuItem>
-      <MenuItem component={Link} onClick={handleClose} to="/teams">
+      <MenuItem component={Link} onClick={handleClose} to="/news">
         Opinions
       </MenuItem>
-      <MenuItem component={Link} onClick={handleClose} to="/videos">
+      <MenuItem component={Link} onClick={handleClose} to="/news">
         Specials
       </MenuItem>
       <MenuItem component={Link} onClick={handleClose} to="/rankings">
@@ -157,179 +157,248 @@ export const Navbar = () => {
                 fetchpriority="high"
               />
             </div>
-
-            <Button
-              style={{ textTransform: 'none' }}
-              color="inherit"
-              component={Link}
-              to="/"
-              onClick={() => {
-                setActive('home');
-              }}
-              sx={
-                (active === '' || active === 'home') && {
-                  background: '',
-                }
-              }>
-              Live Scores
-            </Button>
-            <Button
-              style={{ textTransform: 'none' }}
-              color="inherit"
-              component={Link}
+            <Link
+              to="/livescores"
+              style={{
+                color: 'white',
+                textDecoration: 'none',
+                marginTop: '3px',
+              }}>
+              <Button
+                style={{ textTransform: 'none' }}
+                color="inherit"
+                component={Link}
+                to="/livescores"
+                onClick={() => {
+                  setActive('home');
+                }}
+                sx={
+                  (active === '' || active === 'home') && {
+                    background: '',
+                  }
+                }>
+                Live Scores
+              </Button>
+            </Link>
+            <Link
               to="/schedule"
-              onClick={() => {
-                setActive('schedule');
-              }}
-              sx={active === 'schedule' && { background: '' }}>
-              Schedule
-            </Button>
-            <Button
-              style={{ textTransform: 'none' }}
-              color="inherit"
-              component={Link}
+              style={{
+                color: 'white',
+                textDecoration: 'none',
+                marginTop: '3px',
+              }}>
+              <Button
+                style={{ textTransform: 'none' }}
+                color="inherit"
+                component={Link}
+                to="/schedule"
+                onClick={() => {
+                  setActive('schedule');
+                }}
+                sx={active === 'schedule' && { background: '' }}>
+                Schedule
+              </Button>
+            </Link>
+            <Link
               to="/archives"
-              onClick={() => {
-                setActive('archives');
-              }}
-              sx={active === 'archives' && { background: '' }}>
-              Archives
-            </Button>
-
-            <Button
-              className={classes.button}
-              onMouseOver={handleMouseOver}
-              style={{ textTransform: 'none' }}
-              color="inherit"
-              component={Link}
+              style={{
+                color: 'white',
+                textDecoration: 'none',
+                marginTop: '3px',
+              }}>
+              <Button
+                style={{ textTransform: 'none' }}
+                color="inherit"
+                component={Link}
+                to="/archives"
+                onClick={() => {
+                  setActive('archives');
+                }}
+                sx={active === 'archives' && { background: '' }}>
+                Archives
+              </Button>
+            </Link>
+            <Link
               to="/news"
-              onClick={() => {
-                setActive('news');
-              }}
-              sx={active === 'news' && { background: '' }}>
-              News
-            </Button>
-
-            <Button
-              className={classes.button}
-              onMouseOver={handleMouseOver1}
-              style={{ textTransform: 'none' }}
-              color="inherit"
-              component={Link}
+              style={{
+                color: 'white',
+                textDecoration: 'none',
+                marginTop: '3px',
+              }}>
+              <Button
+                className={classes.button}
+                onMouseOver={handleMouseOver}
+                style={{ textTransform: 'none' }}
+                color="inherit"
+                component={Link}
+                to="/news"
+                onClick={() => {
+                  setActive('news');
+                }}
+                sx={active === 'news' && { background: '' }}>
+                News
+              </Button>
+            </Link>
+            <Link
               to="/series"
-              onClick={() => {
-                setActive('series');
-              }}
-              sx={
-                (active === 'series' || active.includes('selectxi')) && {
-                  background: '',
-                }
-              }>
-              Series
-            </Button>
-            <Button
-              style={{ textTransform: 'none' }}
-              color="inherit"
-              component={Link}
+              style={{
+                color: 'white',
+                textDecoration: 'none',
+                marginTop: '3px',
+              }}>
+              <Button
+                style={{ textTransform: 'none' }}
+                color="inherit"
+                component={Link}
+                to="/series"
+                onClick={() => {
+                  setActive('series');
+                }}
+                sx={
+                  (active === 'series' || active.includes('selectxi')) && {
+                    background: '',
+                  }
+                }>
+                Series
+              </Button>
+            </Link>
+            <Link
               to="/teams"
-              onClick={() => {
-                setActive('teams');
-              }}
-              sx={active === 'teams' && { background: '' }}>
-              Teams
-            </Button>
-            <Button
-              style={{ textTransform: 'none' }}
-              color="inherit"
-              component={Link}
+              style={{
+                color: 'white',
+                textDecoration: 'none',
+                marginTop: '3px',
+              }}>
+              <Button
+                style={{ textTransform: 'none' }}
+                color="inherit"
+                component={Link}
+                to="/teams"
+                onClick={() => {
+                  setActive('teams');
+                }}
+                sx={active === 'teams' && { background: '' }}>
+                Teams
+              </Button>
+            </Link>
+            <Link
               to="/videos"
-              onClick={() => {
-                setActive('videos');
-              }}
-              sx={
-                (active === 'videos' || active.includes('selectxi')) && {
-                  background: '',
-                }
-              }>
-              Videos
-            </Button>
-            <Button
-              style={{ textTransform: 'none' }}
-              color="inherit"
-              component={Link}
-              to="/rankings"
-              onClick={() => {
-                setActive('rankings');
-              }}
-              sx={
-                (active === 'rankings' || active.includes('selectxi')) && {
-                  background: '',
-                }
-              }>
-              Rankings
-            </Button>
-            <Button
-              style={{ textTransform: 'none' }}
-              color="inherit"
-              component={Link}
-              to="/more"
-              onClick={() => {
-                setActive('more');
-              }}
-              sx={
-                (active === 'more' || active.includes('selectxi')) && {
-                  background: '',
-                }
-              }>
-              More
-            </Button>
-            <Button
               style={{
-                textTransform: 'none',
-                backgroundColor: 'white',
-                borderRadius: '50px',
-                color: 'black',
-                height: '30px',
-                marginTop: '6px',
-              }}
-              color="inherit"
-              component={Link}
-              to="/crickbuzzplus"
-              onClick={() => {
-                setActive('crickbuzzplus');
-              }}
-              sx={
-                (active === 'crickbuzzplus' || active.includes('selectxi')) && {
-                  background: '',
-                }
-              }>
-              Crickbuzz Plus
-            </Button>
-
-            <SearchIcon
+                color: 'white',
+                textDecoration: 'none',
+                marginTop: '3px',
+              }}>
+              <Button
+                style={{ textTransform: 'none' }}
+                color="inherit"
+                component={Link}
+                to="/videos"
+                onClick={() => {
+                  setActive('videos');
+                }}
+                sx={
+                  (active === 'videos' || active.includes('selectxi')) && {
+                    background: '',
+                  }
+                }>
+                Videos
+              </Button>
+            </Link>
+            <Link
+              to="/ranking"
               style={{
-                textTransform: 'none',
-                marginTop: '9px',
-              }}
-              id="basic-button"
-              aria-controls={open ? 'basic-menu' : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? 'true' : undefined}
-              // onClick={handleClick}
-            />
-            <AccountCircleIcon
+                color: 'white',
+                textDecoration: 'none',
+                marginTop: '3px',
+              }}>
+              <Button
+                style={{ textTransform: 'none' }}
+                color="inherit"
+                component={Link}
+                to="/ranking"
+                onClick={() => {
+                  setActive('ranking');
+                }}
+                sx={
+                  (active === 'rankings' || active.includes('selectxi')) && {
+                    background: '',
+                  }
+                }>
+                Rankings
+              </Button>
+            </Link>
+            <Link
+              to="/photos"
               style={{
-                textTransform: 'none',
-                marginTop: '10px',
-              }}
-              id="basic-button"
-              aria-controls={open ? 'basic-menu' : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? 'true' : undefined}
-              onClick={() => {
-                LoginPages;
-              }}
-            />
+                color: 'white',
+                textDecoration: 'none',
+                marginTop: '3px',
+              }}>
+              <Button
+                style={{ textTransform: 'none' }}
+                color="inherit"
+                component={Link}
+                to="/photos"
+                onClick={() => {
+                  setActive('more');
+                }}
+                sx={
+                  (active === 'more' || active.includes('selectxi')) && {
+                    background: '',
+                  }
+                }>
+                More
+              </Button>
+            </Link>
+            <Link to="/crickbuzzplus" style={{ textDecoration: 'none' }}>
+              <Button
+                style={{
+                  textTransform: 'none',
+                  backgroundColor: 'white',
+                  borderRadius: '50px',
+                  color: 'black',
+                  height: '30px',
+                  marginTop: '6px',
+                }}
+                color="inherit"
+                component={Link}
+                to="/crickbuzzplus"
+                onClick={() => {
+                  setActive('crickbuzzplus');
+                }}
+                sx={
+                  (active === 'crickbuzzplus' ||
+                    active.includes('selectxi')) && {
+                    background: '',
+                  }
+                }>
+                Crickbuzz Plus
+              </Button>
+            </Link>
+            <Link to="/search" style={{ color: 'white' }}>
+              <SearchIcon
+                style={{
+                  textTransform: 'none',
+                  marginTop: '9px',
+                }}
+                id="basic-button"
+                aria-controls={open ? 'basic-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+              />
+            </Link>
+            <Link to="/login" style={{ color: 'white' }}>
+              <AccountCircleIcon
+                style={{
+                  textTransform: 'none',
+                  marginTop: '10px',
+                }}
+                id="basic-button"
+                aria-controls={open ? 'basic-menu' : undefined}
+                aria-haspopup="true"
+                aria-expanded={open ? 'true' : undefined}
+              />
+            </Link>
           </div>
           <div className={classes.menuIcon}>
             <MenuIcon
@@ -337,7 +406,6 @@ export const Navbar = () => {
               aria-controls={open ? 'basic-menu' : undefined}
               aria-haspopup="true"
               aria-expanded={open ? 'true' : undefined}
-              // onClick={<LoginPage />}
             />
           </div>
         </Toolbar>

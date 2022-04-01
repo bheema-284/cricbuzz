@@ -30,10 +30,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export const LoginPage = () => {
+export const OtpPage = () => {
   const [active, setActive] = useState(location.pathname.substring(1));
   const classes = useStyles();
   const navigate = useNavigate();
+  const handleLogin = () => {
+    console.log('here');
+  };
   return (
     <>
       <AppBar
@@ -92,31 +95,34 @@ export const LoginPage = () => {
           />
         </div>
         <div id="logindiv">
-          <h1 id="h1">Login / Sign Up</h1>
-          <p id="loginp">We will send OTP to your email id</p>
+          <h4 id="h1">Enter the 6 digit OTP</h4>
+          <p id="loginp">OTP sent to your email id</p>
 
-          <div id="inputdiv">
-            <MailOutlineIcon style={{ marginTop: '3px' }} fontSize="small" />
-            <input
-              type="text"
-              name=""
-              id="inpt"
-              placeholder="Enter your email id"
-            />
+          <div id="cnum">
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
+            <input type="text" />
           </div>
-          <hr />
-          <div id="box">
-            <CheckBoxIcon
-              style={{ marginTop: '13px', color: '#009270' }}
-              fontSize="small"
-            />
-            <p id="cbox">
-              I agree with the Terms of Use and Privacy Policy of Cricbuzz
+          <Link to="/crickbuzzplus">
+            <button id="btns">SUBMIT</button>
+          </Link>
+          <div>
+            <p id="rept">
+              <a id="reotp" href="">
+                RESEND OTP
+              </a>
             </p>
           </div>
-          <Link to="/login-otp" style={{ color: 'white' }}>
-            <button id="btn">Continue</button>
-          </Link>
+        </div>
+        <div id="lath">
+          <p id="rept">
+            <a id="reotp" href="">
+              Need help?
+            </a>
+          </p>
         </div>
       </div>
     </>
