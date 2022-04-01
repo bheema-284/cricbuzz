@@ -26,5 +26,6 @@ app.use("/schedule", ScheduleController);
 app.use("/videos", VideosController);
 app.use("/photos", PhotosController);
 app.use("/ranking", RankingController);
+// app.use("/player_rankings", RankingController);
 
 module.exports = app;
