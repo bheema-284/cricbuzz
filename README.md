@@ -50,5 +50,5 @@ We were five members in team:
 4. The repository folder is cloned
 5. Open in VS Code
 6. Open project run with command called npm run dev on your local system 
-7. View in browser and signup and signin to access all features.
+7. View in browser and signup/signin to access all features.
 
